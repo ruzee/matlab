@@ -1,0 +1,12 @@
+f=imread('rice.png');
+f=im2double(f);
+figure,imshow(f);
+[M,N]=size(f);
+M=2*M;
+N=2*N;
+D=sqrt(U.^2+V.^2);
+F=fft2(f,M,N);
+H=gaussianlowpass(M,N,50);
+G=H.*F;
+g=ifft2(G);
+figure,imshow(g(1:M/2,1:N/2));
