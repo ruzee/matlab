@@ -1,3 +1,4 @@
+%hipassgaussian.m
 f=fspecial('gaussian',[512 512],20);
 lp=abs(freqz2(f,512,512));
 hp=fftshift(lp);

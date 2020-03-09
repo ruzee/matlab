@@ -1,3 +1,4 @@
+%rgb2gray_blockproc
 clear;
 I=imread('peppers.png');
 [M,N]=size(I);

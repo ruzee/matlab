@@ -1,3 +1,4 @@
+%mygaussian.m
 %only for gray image
 clear;
 f=imread('rice.png');
