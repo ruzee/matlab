@@ -1,0 +1,9 @@
+%myrgb2gray
+I=imread('flamingos.jpg');
+fun=@(block_struct)(block_struct.data(:,:,1)*0.299+...
+    block_struct.data(:,:,2)*0.587+...
+    block_struct.data(:,:,3)*0.114);
+[M,N,P]=size(I);
+siz=bestblk([M,N],50);
+B=blockproc(I,siz,fun);
+imshow(B);
