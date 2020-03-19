@@ -1,7 +1,7 @@
 %hipassgaussian.m
 f=fspecial('gaussian',[512 512],20);
 lp=abs(freqz2(f,512,512));
-hp=fftshift(lp);
+hp=fftshift(1-lp);
 figure,mesh(hp);
 I=imread('rice.png');
 I=im2double(I);
